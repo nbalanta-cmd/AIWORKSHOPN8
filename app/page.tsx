@@ -10,15 +10,16 @@ export default function Home() {
       <header className="hero">
         <h1>Nataniel Balantac</h1>
         <p className="lede">a senior at UH Manoa studying linguistics</p>
+        <div className="ornament" aria-hidden="true" />
       </header>
 
       <main>
         <section aria-labelledby="about-heading">
           <h2 id="about-heading">About</h2>
-          <p>
-            I&apos;m a senior at UH Manoa studying linguistics. This is my last
-            year of the degree, so most of my time goes to upper-level
-            coursework and the research that comes with it.
+          <p className="dropcap">
+            My degree is in linguistics at UH Manoa, where I am a senior. This
+            is my last year, so most of my time goes to upper-level coursework
+            and the research that comes with it.
           </p>
         </section>
 
@@ -33,6 +34,7 @@ export default function Home() {
       </main>
 
       <footer className="footer">
+        <div className="ornament" aria-hidden="true" />
         <p>© Nataniel Balantac {new Date().getFullYear()}</p>
       </footer>
     </div>
