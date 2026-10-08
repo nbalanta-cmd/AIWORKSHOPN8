@@ -13,6 +13,8 @@
   --text-body: 1.0625rem;
   --text-h2: 1.375rem;
   --text-h1: clamp(2rem, 6vw, 2.75rem);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   --leading-body: 1.6;
   --leading-tight: 1.2;
   --weight-heading: 650;
@@ -32,6 +34,12 @@
   --focus-offset: 2px;
   --radius: 2px;
   --touch-target: 44px;
+
+  /* Binary background */
+  --binary-cell: 1.25rem;
+  --binary-alpha: 0.1;
+  --binary-alpha-peak: 0.22;
+  --binary-radius: 7rem;
 }
 
 *,
@@ -78,7 +86,18 @@ h2 {
   margin-bottom: var(--space-2);
 }
 
+.binary-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .page {
+  position: relative;
+  z-index: 1;
   max-width: var(--measure);
   margin: 0 auto;
   padding: var(--space-5) var(--gutter) var(--space-4);
