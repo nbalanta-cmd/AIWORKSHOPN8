@@ -35,11 +35,17 @@
   --radius: 2px;
   --touch-target: 44px;
 
-  /* Binary background */
+  /* Binary wave background */
   --binary-cell: 1.25rem;
-  --binary-alpha: 0.1;
+  --binary-alpha: 0.2;
   --binary-alpha-peak: 0.22;
   --binary-radius: 7rem;
+  --binary-amplitude: 1.5rem;
+  --binary-wavelength: 22rem;
+  --binary-speed: 1.4;
+  --binary-hue-speed: 25;
+  --binary-saturation: 85%;
+  --binary-lightness: 50%;
 }
 
 *,
