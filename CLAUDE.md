@@ -21,7 +21,7 @@
 
 ## Conventions
 - The homepage at / stays my personal page. The app lives at /tasks, with /login for signing up and logging in. The homepage links to it with the words Study tasks.
-- Reuse the CSS variables already in app/globals.css. No new colors or fonts.
+- Reuse the CSS variables already in app/globals.css. No new colors or fonts. The rainbow binary wave background on the homepage stays as it is: do not remove, restyle or tone it down.
 - Every form shows Supabase's own error message, not a generic one.
 - Every new table gets row level security in the same SQL, scoped to the row's owner, and you say which of read, create, update and delete each rule covers.
 - Before opening a pull request, update roadmap.md and project-state.md to match the work in it.

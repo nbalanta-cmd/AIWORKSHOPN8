@@ -3,7 +3,7 @@
 Last updated: 2026-10-15
 
 ## Works
-- The homepage at / shows my name, an About section, a This semester list and a footer.
+- The homepage at / shows my name, an About section, a This semester list and a footer, over a rainbow binary wave background.
 
 ## Broken or flaky
 - Nothing known.
