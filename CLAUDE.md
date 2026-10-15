@@ -18,6 +18,7 @@
 - Merge a feature pull request. Open it as a draft; I merge.
 - Add Tailwind or any UI library. Plain CSS only.
 - Put real personal data in the app. Fake names and fake content only.
+- Hand-write a replacement for an official library to avoid asking about a dependency. If a slice needs a package, stop and ask me.
 
 ## Conventions
 - The homepage at / stays my personal page. The app lives at /tasks, with /login for signing up and logging in. The homepage links to it with the words Study tasks.
