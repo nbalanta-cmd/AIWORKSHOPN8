@@ -23,4 +23,3 @@ Subfields are a fixed list: Phonetics, Phonology, Morphology, Syntax, Semantics,
 - Priority: low, normal, high
 - A page showing what I finished each week
 - A link on the homepage with the words Study tasks, pointing to /tasks
-- Stay signed in for longer than an hour (refresh the Supabase session instead of signing out when it expires)

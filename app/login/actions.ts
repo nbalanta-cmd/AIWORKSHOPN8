@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { saveSession, signIn, signUp } from "../lib/auth";
+import { signIn, signUp } from "../lib/auth";
 
 export type LoginState = { error: string; email: string } | null;
 
@@ -18,6 +18,5 @@ export async function authenticate(
 
   if ("error" in result) return { error: result.error, email };
 
-  await saveSession(result.accessToken, result.expiresIn);
   redirect("/tasks");
 }

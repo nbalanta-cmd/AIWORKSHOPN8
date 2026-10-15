@@ -9,11 +9,10 @@ Last updated: 2026-10-15
 ## Broken or flaky
 - Nothing known.
 - Not yet checked against the real Supabase project. Locally it was tested only against a stand-in that copies Supabase Auth's responses.
-- A session lasts one hour (Supabase's access token lifetime). After that, /tasks sends you back to /login. Refreshing the session is in the Backlog.
 
 ## Environment notes
 - Next.js App Router, TypeScript, plain CSS in app/globals.css, deployed on Vercel from main. Every pull request gets a Vercel preview link.
-- NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are set in Vercel for Production and Preview. app/lib/auth.ts reads them on the server to call Supabase Auth's HTTP API (/auth/v1); no Supabase package is installed.
+- NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are set in Vercel for Production and Preview. They are read by @supabase/ssr and @supabase/supabase-js, set up as in Supabase's official Next.js App Router example: app/lib/supabase/server.ts creates the server client, and middleware.ts (using app/lib/supabase/middleware.ts) refreshes the session on /login and /tasks so people stay signed in past one hour.
 - Supabase Auth: Confirm email is off, Site URL is the live address, and there is one Redirect URL ending in /**.
 
 ## Next session
