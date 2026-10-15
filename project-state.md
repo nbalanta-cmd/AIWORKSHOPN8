@@ -4,14 +4,17 @@ Last updated: 2026-10-15
 
 ## Works
 - The homepage at / shows my name, an About section, a This semester list and a footer, over a rainbow binary wave background.
+- Slice 1 is built in the pull request "Slice 1: sign up and log in", waiting to be checked on its Vercel preview: /login creates an account or logs in, /tasks shows "Signed in as" and the email with a Log out button, and /tasks sends anyone not signed in to /login.
 
 ## Broken or flaky
 - Nothing known.
+- Not yet checked against the real Supabase project. Locally it was tested only against a stand-in that copies Supabase Auth's responses.
+- A session lasts one hour (Supabase's access token lifetime). After that, /tasks sends you back to /login. Refreshing the session is in the Backlog.
 
 ## Environment notes
 - Next.js App Router, TypeScript, plain CSS in app/globals.css, deployed on Vercel from main. Every pull request gets a Vercel preview link.
-- NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are set in Vercel for Production and Preview. Nothing reads them yet.
+- NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are set in Vercel for Production and Preview. app/lib/auth.ts reads them on the server to call Supabase Auth's HTTP API (/auth/v1); no Supabase package is installed.
 - Supabase Auth: Confirm email is off, Site URL is the live address, and there is one Redirect URL ending in /**.
 
 ## Next session
-- Build slice 1, sign up and log in, the slice marked ACTIVE in roadmap.md.
+- Check slice 1 on the preview link. Once it passes and is merged, mark it done in roadmap.md and make slice 2 ACTIVE.
